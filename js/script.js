@@ -1,17 +1,3 @@
-<div class="container">
-<p id="pagetitle">Pong</p>
-<canvas id="pong" width="420" height="320"></canvas>
-<p id="p1points">Player 1: 0</p>
-<p id="p2points">Player 2: 0</p>
-</div>
-
-<style>
-canvas{
-	cursor: none;
-}
-</style>
-
-<script>
 var canvas;
 var ctx;
 var space;
@@ -86,11 +72,11 @@ function moveCir() {
 	if (cirx <= 21 || cirx >= 400) {	// restart game
 		if (cirx <= 42) {
 			points2++;
-			document.getElementById("p2points").innerHTML = "Player 2: " + points2;
+			document.getElementById("p2points").innerHTML = "Computer: " + points2;
 		}
 		else {
 			points1++;
-			document.getElementById("p1points").innerHTML = "Player 1: " + points1;
+			document.getElementById("p1points").innerHTML = "You: " + points1;
 		}
 		cirx = 377;
 		ciry = 162;
@@ -120,4 +106,3 @@ function moveCir() {
 window.requestAnimationFrame(draw);
 canvas.addEventListener("mousedown", c_mousedown);
 canvas.addEventListener("mousemove", mousemove);
-</script>
